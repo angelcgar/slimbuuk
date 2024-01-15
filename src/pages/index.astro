@@ -1,4 +1,5 @@
 ---
+import FirstCarrousel from "../components/FirstCarrousel.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -8,9 +9,7 @@ import Layout from "../layouts/Layout.astro";
       <h1>Slimbuuk</h1>
     </div>
     <div class="aside">
-      <img src="/public/img/dos-laptop.webp" alt="" />
-      <img src="/public/img/laptop.webp" alt="" />
-      <img src="/public/img/torre.webp" alt="" />
+      <FirstCarrousel />
     </div>
     <div class="main"></div>
     <div class="footer"></div>
@@ -44,8 +43,5 @@ import Layout from "../layouts/Layout.astro";
   .footer {
     background-color: rgb(78, 22, 2);
     grid-area: footer;
-  }
-  img {
-    max-width: 500px;
   }
 </style>
