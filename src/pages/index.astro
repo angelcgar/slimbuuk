@@ -6,7 +6,7 @@ import Layout from "../layouts/Layout.astro";
 <Layout title="Welcome to Astro.">
   <div class="container">
     <div class="header">
-      <h1>Slimbuuk</h1>
+      <h1 class="first-h1">Slimbuuk</h1>
     </div>
     <div class="aside">
       <FirstCarrousel />
@@ -43,5 +43,13 @@ import Layout from "../layouts/Layout.astro";
   .footer {
     background-color: rgb(78, 22, 2);
     grid-area: footer;
+  }
+
+  .first-h1 {
+    font-weight: bold;
+    padding: 5px 5px 15px 5px;
+    margin-bottom: 3px;
+    margin-left: 10px;
+    font-size: 30px;
   }
 </style>
