@@ -1,12 +1,25 @@
 ---
 import FirstCarrousel from "../components/FirstCarrousel.astro";
 import Layout from "../layouts/Layout.astro";
+import ArrowRight from "../components/ArrowRight.astro";
 ---
 
 <Layout title="Welcome to Astro.">
   <div class="container">
     <div class="header">
       <h1 class="first-h1">Slimbuuk</h1>
+    </div>
+    <div class="mini-nav">
+      <ArrowRight />
+    </div>
+    <div class="nav">
+      <nav>
+        <ul class="listUp">
+          <li class="list">lorem su</li>
+          <li class="list">lorem su</li>
+          <li class="list">lorem su</li>
+        </ul>
+      </nav>
     </div>
     <div class="aside">
       <FirstCarrousel />
@@ -23,7 +36,7 @@ import Layout from "../layouts/Layout.astro";
     grid-template-rows: 60px 1fr 1fr 1fr;
     min-height: 100vh;
     grid-template-areas:
-      "header header header"
+      "header header mini-nav"
       "aside aside aside"
       "main main main"
       "footer footer .";
@@ -31,6 +44,24 @@ import Layout from "../layouts/Layout.astro";
   .header {
     background-color: rgb(78, 1, 1);
     grid-area: header;
+  }
+  .nav {
+    background-color: rgba(43, 29, 0, 0.882);
+    grid-area: nav;
+    display: none;
+  }
+  .mini-nav {
+    background-color: blue;
+    grid-area: mini-nav;
+  }
+  .listUp {
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+  }
+  .list {
+    padding-inline: 10px;
+    list-style: none;
   }
   .aside {
     background-color: rgb(1, 1, 68);
@@ -43,6 +74,22 @@ import Layout from "../layouts/Layout.astro";
   .footer {
     background-color: rgb(78, 22, 2);
     grid-area: footer;
+  }
+
+  @media (width >= 500px) {
+    .container {
+      grid-template-areas:
+        "header nav nav"
+        "aside aside aside"
+        "main main main"
+        "footer footer .";
+    }
+    .header {
+      background-color: rgba(0, 183, 183, 0.914);
+    }
+    .nav {
+      display: block;
+    }
   }
 
   .first-h1 {
