@@ -1,14 +1,31 @@
-<div>
-  <p>Aqui va nuestro contenido principal sobre nuestra Tienda en linea</p>
+<div class="main-div">
+  <h3 class="main-h3">
+    Aqui va nuestro contenido principal sobre nuestra Tienda en linea
+  </h3>
+  <div class="main-header"></div>
 </div>
 
 <style>
-  p {
+  .main-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .main-h3 {
+    padding: 3px;
     text-align: center;
     padding: 10px;
     text-wrap: wrap;
     font-size: 20px;
     font-weight: 700;
     margin: 5px;
+  }
+  .main-header {
+    background-color: azure;
+    width: 80%;
+    height: 400px;
+    margin: 15px 0;
+    padding: 5px;
   }
 </style>

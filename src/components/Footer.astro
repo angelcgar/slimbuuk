@@ -1,11 +1,24 @@
 <div class="footer-div">
-  <p>Aqui el footer</p>
+  <h3 class="footer-h3">Aqui el footer</h3>
+  <div class="one">1</div>
+  <div class="one">2</div>
 </div>
 
 <style>
   .footer-div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    margin: 4px;
+    gap: 3px;
+  }
+  .footer-h3 {
+    text-align: center;
+    color: rgb(183, 237, 255);
+  }
+  .one {
+    background-color: rgba(100, 100, 100, 0.781);
+    color: black;
+    text-align: center;
   }
 </style>
