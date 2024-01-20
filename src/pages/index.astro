@@ -1,39 +1,51 @@
 ---
-import FirstCarrousel from "../components/FirstCarrousel.astro";
 import Layout from "../layouts/Layout.astro";
-import ArrowRight from "../components/ArrowRight.astro";
+import FirstCarrousel from "../components/FirstCarrousel.astro";
+import Nav from "../components/Nav.astro";
+import Main from "../components/Main.astro";
+import Footer from "../components/Footer.astro";
+import ArrowRight from "../components/icons/ArrowRight.astro";
 ---
 
 <Layout title="Welcome to Astro.">
   <div class="container">
-    <div class="header">
-      <h1 class="first-h1">Slimbuuk</h1>
-    </div>
+    <header class="header">
+      <div class="myH1">
+        <h1 class="first-h1">Slimbuuk</h1>
+      </div>
+    </header>
+
     <div class="mini-nav">
       <ArrowRight />
     </div>
+
     <div class="nav">
-      <nav>
-        <ul class="listUp">
-          <li class="list">lorem su</li>
-          <li class="list">lorem su</li>
-          <li class="list">lorem su</li>
-        </ul>
-      </nav>
+      <Nav />
     </div>
+
     <div class="aside">
       <FirstCarrousel />
     </div>
-    <div class="main"></div>
-    <div class="footer"></div>
+
+    <section class="main">
+      <Main />
+    </section>
+
+    <footer class="footer">
+      <Footer />
+    </footer>
   </div>
 </Layout>
 
 <style>
+  .myH1 {
+    display: flex;
+    align-items: flex-start;
+  }
   .container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 60px 1fr 1fr 1fr;
+    grid-template-rows: 75px 1fr 1fr 1fr;
     min-height: 100vh;
     grid-template-areas:
       "header header mini-nav"
@@ -54,15 +66,7 @@ import ArrowRight from "../components/ArrowRight.astro";
     background-color: blue;
     grid-area: mini-nav;
   }
-  .listUp {
-    display: flex;
-    flex-direction: row;
-    font-size: 20px;
-  }
-  .list {
-    padding-inline: 10px;
-    list-style: none;
-  }
+
   .aside {
     background-color: rgb(1, 1, 68);
     grid-area: aside;

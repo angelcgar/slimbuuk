@@ -3,44 +3,50 @@
 ---
 
 <div class="slider">
-  <img
-    class="slider-img"
-    src="/public/img/dos-laptop.webp"
-    alt="imagen de dos laptops"
-  />
-  <img
-    class="slider-img"
-    src="/public/img/laptop.webp"
-    alt="una imagen de una laptop"
-  />
-  <img
-    class="slider-img"
-    src="/public/img/torre.webp"
-    alt="una imagen de una computadora de sobre mesa"
-  />
+  <a href="" class="slider-a">
+    <img
+      class="slider-img"
+      src="/public/img/dos-laptop.webp"
+      alt="imagen de dos laptops"
+    />
+  </a>
+  <a href="" class="slider-a">
+    <img
+      class="slider-img"
+      src="/public/img/laptop.webp"
+      alt="una imagen de una laptop"
+    />
+  </a>
+  <a href="" class="slider-a">
+    <img
+      class="slider-img"
+      src="/public/img/torre.webp"
+      alt="una imagen de una computadora de sobre mesa"
+    />
+  </a>
 </div>
 
 <style>
   .slider {
     position: relative;
     height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     /* display: bl; */
   }
-  .slider-img:first-child {
+  .slider-a:first-child {
     position: absolute;
     z-index: 3;
+    opacity: 1;
   }
-  .slider-img:nth-child(2) {
+  .slider-a:nth-child(2) {
     position: absolute;
-    left: 3px;
-    top: 10px;
     z-index: 2;
     opacity: 0;
   }
-  .slider-img:nth-child(3) {
+  .slider-a:nth-child(3) {
     position: absolute;
-    left: 0;
-    top: 0;
     z-index: 1;
     opacity: 0;
   }
