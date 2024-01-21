@@ -6,6 +6,7 @@ import Nav from "../components/Nav.astro";
 import Main from "../components/Main.astro";
 import Footer from "../components/Footer.astro";
 import ArrowRight from "../components/icons/ArrowRight.astro";
+import MiniNav from "../components/MiniNav.astro";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -15,7 +16,7 @@ import ArrowRight from "../components/icons/ArrowRight.astro";
     </header>
 
     <div class="mini-nav">
-      <ArrowRight />
+      <MiniNav />
     </div>
 
     <div class="nav">
@@ -58,7 +59,7 @@ import ArrowRight from "../components/icons/ArrowRight.astro";
     display: none;
   }
   .mini-nav {
-    background-color: blue;
+    background-color: rgba(27, 29, 43, 0.58);
     grid-area: mini-nav;
   }
 
