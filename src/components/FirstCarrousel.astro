@@ -3,27 +3,35 @@
 ---
 
 <div class="hola">
-  <a href="" class="slider-a">
-    <img
-      class="slider-img"
-      src="/public/img/dos-laptop.webp"
-      alt="imagen de dos laptops"
-    />
-  </a>
-  <a href="" class="slider-a">
-    <img
-      class="slider-img"
-      src="/public/img/laptop.webp"
-      alt="una imagen de una laptop"
-    />
-  </a>
-  <a href="" class="slider-a">
-    <img
-      class="slider-img"
-      src="/public/img/torre.webp"
-      alt="una imagen de una computadora de sobre mesa"
-    />
-  </a>
+  <div class="slider-div">
+    <a href="" class="">
+      <img
+        class="slider-img"
+        src="/public/img/dos-laptop.webp"
+        alt="imagen de dos laptops"
+      />
+    </a>
+  </div>
+
+  <div class="slider-div">
+    <a href="" class="">
+      <img
+        class="slider-img"
+        src="/public/img/laptop.webp"
+        alt="una imagen de una laptop"
+      />
+    </a>
+  </div>
+
+  <div class="slider-div">
+    <a href="" class="">
+      <img
+        class="slider-img"
+        src="/public/img/torre.webp"
+        alt="una imagen de una computadora de sobre mesa"
+      />
+    </a>
+  </div>
 </div>
 
 <style>
@@ -35,17 +43,17 @@
     align-items: center;
     /* display: bl; */
   }
-  .slider-a:first-child {
+  .slider-div:first-child {
     position: absolute;
     z-index: 3;
     opacity: 1;
   }
-  .slider-a:nth-child(2) {
+  .slider-div:nth-child(2) {
     position: absolute;
     z-index: 2;
     opacity: 0;
   }
-  .slider-a:nth-child(3) {
+  .slider-div:nth-child(3) {
     position: absolute;
     z-index: 1;
     opacity: 0;
