@@ -1,9 +1,30 @@
----
-import ArrowRight from "./icons/ArrowRight.astro";
----
-
 <div>
-  <nav>
-    <ArrowRight class="" />
+  <nav class="flex flex-col items-center justify-center">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="128"
+      height="128"
+      viewBox="0 0 16 16"
+      ><path
+        fill="#ffffff"
+        d="M2 3.75A.75.75 0 0 1 2.75 3h10.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 3.75m0 4A.75.75 0 0 1 2.75 7h10.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 7.75m0 4a.75.75 0 0 1 .75-.75h10.5a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1-.75-.75"
+      ></path></svg
+    >
   </nav>
 </div>
+
+<style>
+  svg {
+    height: 50px;
+    padding: 2px;
+    margin-left: 15px;
+    margin-top: 9px;
+    cursor: pointer;
+    z-index: 2;
+  }
+  @media (width >= 600px) {
+    svg {
+      display: none;
+    }
+  }
+</style>
