@@ -1,0 +1,29 @@
+---
+import { type Publication } from '@/types/publications.ts';
+import publication from '@/data/publications.json';
+
+const publications: Publication[] = publication;
+---
+
+<section class="publications">
+  <h2 class="text-2xl font-bold text-center">Ultimos Publicaciones</h2>
+
+  <div class="flex flex-row gap-2 justify-center items-center">
+    {
+      publications.map((publication) => (
+        <article class="flex flex-col justify-center items-center container relative">
+          <h3 class="text-xl font-bold  text-center shadow-lg text-slate-100 absolute top-0 left-0 z-10">
+            {publication.title}
+          </h3>
+          <a
+            href={publication.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="p-2 rounded-lg bg-gray-800 border border-gray-300 hover:border-gray-400 hover:bg-gray-100 transition-all duration-200 ease-in-out w-96 h-96 absolute top-0 left-0 z-9"
+            style={`background-image: url(${publication.image}); background-size: cover; background-position: center; background-repeat: no-repeat;`}
+          />
+        </article>
+      ))
+    }
+  </div>
+</section>
