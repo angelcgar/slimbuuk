@@ -1,6 +1,6 @@
 ---
-import { type Carrousel } from "../types/carrousel";
-import carrousel from "../json/carrousel.json";
+import { type Carrousel } from '../types/carrousel';
+import carrousel from '../json/carrousel.json';
 
 const carrouselData: Carrousel[] = carrousel;
 // console.log(carrousel);
@@ -46,11 +46,11 @@ const carrouselData: Carrousel[] = carrousel;
 </style>
 
 <script>
-  import EmblaCarousel from "embla-carousel";
-  import Autoplay from "embla-carousel-autoplay";
+  import EmblaCarousel from 'embla-carousel';
+  import Autoplay from 'embla-carousel-autoplay';
 
   const emblaNode: HTMLElement = document.querySelector(
-    ".embla"
+    '.embla',
   ) as HTMLElement;
   const options = { loop: false };
   const plugins = [Autoplay()];

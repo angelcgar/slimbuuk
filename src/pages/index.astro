@@ -1,16 +1,19 @@
 ---
-import FirstCarrousel from "../components/FirstCarrousel.astro";
-import Footer from "../components/Footer.astro";
-import Header from "../components/Header.astro";
-import Layout from "../layouts/Layout.astro";
-import Main from "../components/Main.astro";
-import MiniNav from "../components/MiniNav.astro";
-import Nav from "../components/Nav.astro";
+import FirstCarrousel from '../components/FirstCarrousel.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import Layout from '../layouts/Layout.astro';
+import Main from '../components/Main.astro';
+import MiniNav from '../components/MiniNav.astro';
+import Nav from '../components/Nav.astro';
 
-const COLOR_SCHEME = "#13151a";
+const COLOR_SCHEME = '#13151a';
 ---
 
-<Layout title="Slimbuuk - Los mejores ordenadores Linux y Windows" description="Slimbuuk es un sitio web con un enfoque de compartir información sobre los mejores ordenadores Linux y Windows.">
+<Layout
+  title="Slimbuuk - Los mejores ordenadores Linux y Windows"
+  description="Slimbuuk es un sitio web con un enfoque de compartir información sobre los mejores ordenadores Linux y Windows."
+>
   <div class="container">
     <header class="header">
       <Header />
@@ -45,17 +48,18 @@ const COLOR_SCHEME = "#13151a";
     grid-template-rows: 75px 1fr 1fr 1fr;
     min-height: 100vh;
     grid-template-areas:
-      "header header mini-nav"
-      "aside aside aside"
-      "main main main"
-      "footer footer footer";
+      'header header mini-nav'
+      'aside aside aside'
+      'main main main'
+      'footer footer footer';
   }
   .header {
     background-color: var(--colorScheme);
     grid-area: header;
   }
   .nav {
-    background-color: var(--colorScheme);
+    /* background-color: var(--colorScheme); */
+    background-color: rgb(3, 114, 114);
     grid-area: nav;
     display: none;
   }
@@ -80,10 +84,10 @@ const COLOR_SCHEME = "#13151a";
   @media (width >= 600px) {
     .container {
       grid-template-areas:
-        "header nav nav"
-        "aside aside aside"
-        "main main main"
-        "footer footer footer";
+        'header nav nav'
+        'aside aside aside'
+        'main main main'
+        'footer footer footer';
     }
     .header {
       background-color: rgba(0, 183, 183, 0.914);
