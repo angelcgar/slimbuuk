@@ -2,62 +2,46 @@
 
 ---
 
-<div class="hola">
-  <div class="slider-div">
-    <a href="" class="">
-      <img
-        class="slider-img"
-        src="/public/img/dos-laptop.webp"
-        alt="imagen de dos laptops"
-      />
-    </a>
-  </div>
+<div class="embla">
+  <div class="embla__container">
+    <!-- Slide 1 -->
+    <div class="embla__slide flex justify-between">
+      <p>Slide 1</p>
+      <a href="" class="">
+        <img
+          class=""
+          src="/public/img/dos-laptop.webp"
+          alt="imagen de dos laptops"
+        />
+      </a>
+    </div>"Astro description"
 
-  <div class="slider-div">
-    <a href="" class="">
-      <img
-        class="slider-img"
-        src="/public/img/laptop.webp"
-        alt="una imagen de una laptop"
-      />
-    </a>
-  </div>
+    <!-- Slide 2 -->
+    <div class="embla__slide flex justify-between">
+      <a href="" class="">
+        <img
+          class=""
+          src="/public/img/laptop.webp"
+          alt="una imagen de una laptop"
+        />
+      </a>
+      <p>Slide 2</p>
+    </div>
 
-  <div class="slider-div">
-    <a href="" class="">
-      <img
-        class="slider-img"
-        src="/public/img/torre.webp"
-        alt="una imagen de una computadora de sobre mesa"
-      />
-    </a>
+    <!-- Slide 3 -->
+    <div class="embla__slide flex justify-between">
+      <p>Slide 3</p>
+      <a href="" class="">
+        <img
+          class=""
+          src="/public/img/torre.webp"
+          alt="una imagen de una computadora de sobre mesa"
+        />
+      </a>
+    </div>
   </div>
 </div>
-
 <style>
-  .hola {
-    position: relative;
-    height: 600px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* display: bl; */
-  }
-  .slider-div:first-child {
-    position: absolute;
-    z-index: 3;
-    opacity: 1;
-  }
-  .slider-div:nth-child(2) {
-    position: absolute;
-    z-index: 2;
-    opacity: 0;
-  }
-  .slider-div:nth-child(3) {
-    position: absolute;
-    z-index: 1;
-    opacity: 0;
-  }
   img {
     width: 100px;
     height: 100px;
@@ -68,4 +52,30 @@
       height: 450px;
     }
   }
+
+  /* embla carousel */
+  .embla {
+    overflow: hidden;
+  }
+  .embla__container {
+    display: flex;
+  }
+  .embla__slide {
+    flex: 0 0 100%;
+    min-width: 0;
+  }
 </style>
+
+<script>
+  import EmblaCarousel from "embla-carousel";
+  import Autoplay from "embla-carousel-autoplay";
+
+  const emblaNode: HTMLElement = document.querySelector(
+    ".embla"
+  ) as HTMLElement;
+  const options = { loop: false };
+  const plugins = [Autoplay()];
+  const emblaApi = EmblaCarousel(emblaNode, options, plugins);
+
+  console.log(emblaApi.slideNodes()); // Access API
+</script>

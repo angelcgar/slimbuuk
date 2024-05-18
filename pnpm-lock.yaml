@@ -20,6 +20,9 @@ importers:
       embla-carousel:
         specifier: 8.0.2
         version: 8.0.2
+      embla-carousel-autoplay:
+        specifier: ^8.1.1
+        version: 8.1.1(embla-carousel@8.0.2)
       tailwindcss:
         specifier: 3.4.3
         version: 3.4.3
@@ -1067,6 +1070,11 @@ packages:
 
   electron-to-chromium@1.4.647:
     resolution: {integrity: sha512-Z/fTNGwc45WrYQhPaEcz5tAJuZZ8G7S/DBnhS6Kgp4BxnS40Z/HqlJ0hHg3Z79IGVzuVartIlTcjw/cQbPLgOw==}
+
+  embla-carousel-autoplay@8.1.1:
+    resolution: {integrity: sha512-MwQzErkZDBL06JGIjxx8P2YgpbfaLCWtowfbd0MfhAUgFOiMeYTHG4C3VzBRse2B/aV8K9PfXrdvFoNvhOOVHQ==}
+    peerDependencies:
+      embla-carousel: 8.1.1
 
   embla-carousel@8.0.2:
     resolution: {integrity: sha512-bogsDO8xosuh/l3PxIvA5AMl3+BnRVAse9sDW/60amzj4MbGS5re4WH5eVEXiuH8G1/3G7QUAX2QNr3Yx8z5rA==}
@@ -3315,6 +3323,10 @@ snapshots:
   eastasianwidth@0.2.0: {}
 
   electron-to-chromium@1.4.647: {}
+
+  embla-carousel-autoplay@8.1.1(embla-carousel@8.0.2):
+    dependencies:
+      embla-carousel: 8.0.2
 
   embla-carousel@8.0.2: {}
 
