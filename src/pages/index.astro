@@ -1,11 +1,13 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Header from "../components/Header.astro";
 import FirstCarrousel from "../components/FirstCarrousel.astro";
-import Nav from "../components/Nav.astro";
-import Main from "../components/Main.astro";
 import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+import Main from "../components/Main.astro";
 import MiniNav from "../components/MiniNav.astro";
+import Nav from "../components/Nav.astro";
+
+const COLOR_SCHEME = "#13151a";
 ---
 
 <Layout title="Slimbuuk - Los mejores ordenadores Linux y Windows">
@@ -36,7 +38,7 @@ import MiniNav from "../components/MiniNav.astro";
   </div>
 </Layout>
 
-<style>
+<style define:vars="{{ colorScheme: COLOR_SCHEME }}">
   .container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -49,21 +51,21 @@ import MiniNav from "../components/MiniNav.astro";
       "footer footer footer";
   }
   .header {
-    background-color: #13151a;
+    background-color: var(--colorScheme);
     grid-area: header;
   }
   .nav {
-    background-color: #13151a;
+    background-color: var(--colorScheme);
     grid-area: nav;
     display: none;
   }
   .mini-nav {
-    background-color: #13151a;
+    background-color: var(--colorScheme);
     grid-area: mini-nav;
   }
 
   .aside {
-    background-color: #13151a;
+    background-color: var(--colorScheme);
     grid-area: aside;
   }
   .main {
@@ -75,7 +77,7 @@ import MiniNav from "../components/MiniNav.astro";
     grid-area: footer;
   }
 
-  @media (width >= 500px) {
+  @media (width >= 600px) {
     .container {
       grid-template-areas:
         "header nav nav"
