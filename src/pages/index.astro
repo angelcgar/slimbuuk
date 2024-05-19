@@ -16,7 +16,7 @@ const COLOR_SCHEME = '#13151a';
   title="Slimbuuk - Los mejores ordenadores Linux y Windows"
   description="Slimbuuk es un sitio web con un enfoque de compartir información sobre los mejores ordenadores Linux y Windows."
 >
-  <div class="container">
+  <section class="contenedor container">
     <header class="header">
       <Header />
     </header>
@@ -40,11 +40,11 @@ const COLOR_SCHEME = '#13151a';
     <footer class="footer">
       <Footer />
     </footer>
-  </div>
+  </section>
 </Layout>
 
 <style define:vars="{{ colorScheme: COLOR_SCHEME }}">
-  .container {
+  .contenedor {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 75px 1fr 1fr 1fr;
@@ -79,7 +79,7 @@ const COLOR_SCHEME = '#13151a';
     grid-area: main;
   }
   .footer {
-    background-color: rgb(78, 22, 2);
+    /*background-color: rgb(78, 22, 2);*/
     grid-area: footer;
   }
 
