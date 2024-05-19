@@ -12,6 +12,7 @@ import Nav from '@/components/Nav.astro';
 const COLOR_SCHEME = '#13151a';
 import { type Carrousel } from '@/types/carrousel';
 import carrousel from '@/json/carrousel.json';
+import testimonios from '@/json/testimonios.json';
 ---
 
 <Layout
@@ -37,6 +38,10 @@ import carrousel from '@/json/carrousel.json';
 
     <section class="main">
       <Publications />
+    </section>
+    
+    <section class="testimonios">
+      <FirstCarrousel carrousel={testimonios} />
     </section>
 
     <footer class="footer">

@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "Slide 1",
+    "image": "/public/img/dos-laptop.webp",
+    "description": "Astro description"
+  },
+  {
+    "id": 2,
+    "title": "Slide 2",
+    "image": "/public/img/laptop.webp",
+    "description": "Astro description"
+  },
+  {
+    "id": 3,
+    "title": "Slide 3",
+    "image": "/public/img/torre.webp",
+    "description": "Astro description"
+  }
+]
