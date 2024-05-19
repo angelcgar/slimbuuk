@@ -10,6 +10,8 @@ import MiniNav from '@/components/MiniNav.astro';
 import Nav from '@/components/Nav.astro';
 
 const COLOR_SCHEME = '#13151a';
+import { type Carrousel } from '@/types/carrousel';
+import carrousel from '@/json/carrousel.json';
 ---
 
 <Layout
@@ -30,7 +32,7 @@ const COLOR_SCHEME = '#13151a';
     </div>
 
     <div class="aside">
-      <FirstCarrousel />
+      <FirstCarrousel carrousel={carrousel} />
     </div>
 
     <section class="main">
